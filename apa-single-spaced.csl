@@ -768,6 +768,13 @@
             <text macro="locators-booklike" prefix=" (" suffix=")"/>
           </group>
         </else-if>
+        <else-if type="report">
+          <group delimiter=" ">
+            <text macro="secondary-contributors"/>
+            <text macro="database-location"/>
+            <text macro="number" prefix="(" suffix=")"/>
+          </group>
+        </else-if>
         <else>
           <group delimiter=" ">
             <text macro="secondary-contributors"/>
