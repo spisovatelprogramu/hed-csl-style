@@ -582,18 +582,29 @@
         title (parenthetical) [bracketed]  -->
   <macro name="title-and-descriptions">
     <choose>
-      <if variable="title">
+      <if type="paper-conference">
         <group delimiter=" ">
-          <text macro="title"/>
-          <text macro="parenthetical"/>
+          <text macro="title" suffix="."/>
+          <text macro="parenthetical" prefix="In "/>
           <text macro="bracketed"/>
         </group>
       </if>
       <else>
-        <group delimiter=" ">
-          <text macro="bracketed"/>
-          <text macro="parenthetical"/>
-        </group>
+        <choose>
+          <if variable="title">
+            <group delimiter=" ">
+              <text macro="title"/>
+              <text macro="parenthetical"/>
+              <text macro="bracketed"/>
+            </group>
+          </if>
+          <else>
+            <group delimiter=" ">
+              <text macro="bracketed"/>
+              <text macro="parenthetical"/>
+            </group>
+          </else>
+        </choose>
       </else>
     </choose>
   </macro>
@@ -711,19 +722,19 @@
         <if type="patent">
           <!-- authority: U.S. ; genre: patent ; number: 123,445 -->
           <group delimiter=" ">
-            <text variable="authority" form="short"/>
+            <text form="short" variable="authority"/>
             <choose>
               <if variable="genre">
-                <text variable="genre" text-case="capitalize-first"/>
+                <text text-case="capitalize-first" variable="genre"/>
               </if>
               <else>
                 <!-- This should be localized -->
-                <text value="patent" text-case="capitalize-first"/>
+                <text text-case="capitalize-first" value="patent"/>
               </else>
             </choose>
             <group delimiter=" ">
               <!-- Replace with label variable="number" if that becomes available -->
-              <text term="issue" form="short" text-case="capitalize-first"/>
+              <text form="short" term="issue" text-case="capitalize-first"/>
               <text variable="number"/>
             </group>
           </group>
@@ -741,7 +752,7 @@
           <group delimiter="; ">
             <text macro="secondary-contributors"/>
             <choose>
-              <if type="broadcast graphic map motion_picture song" match="any">
+              <if match="any" type="broadcast graphic map motion_picture song">
                 <!-- For audiovisual media, number information comes after title, not container-title -->
                 <text macro="number"/>
               </if>
@@ -749,10 +760,10 @@
           </group>
         </else-if>
         <else-if type="paper-conference">
-          <group delimiter="">
+          <group>
             <text macro="secondary-contributors"/>
             <text macro="database-location"/>
-            <text variable="event" prefix=", "/>
+            <text font-style="italic" prefix=", " variable="event"/>
             <text macro="number"/>
             <text macro="locators-booklike" prefix=" (" suffix=")"/>
           </group>
