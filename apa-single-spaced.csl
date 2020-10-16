@@ -628,7 +628,7 @@
           <else-if type="paper-conference">
             <choose>
               <if variable="collection-editor editor editorial-director" match="any">
-                <group delimiter=": " font-style="italic">
+                <group delimiter=": ">
                   <text variable="title"/>
                   <!-- Replace with volume-title as that becomes available -->
                   <choose>
