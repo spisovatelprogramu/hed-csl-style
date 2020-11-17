@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
-    <title>HED - test</title>
-    <title-short>APA (single-spaced)</title-short>
-    <id>http://www.zotero.org/styles/apa-single-spaced</id>
-    <link href="http://www.zotero.org/styles/apa-single-spaced" rel="self"/>
+    <title>Hradec Economic Days APA7</title>
+    <title-short>HED APA7/title-short>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
-    <link href="https://apastyle.apa.org/style-grammar-guidelines/references/examples" rel="documentation"/>
+    <link href="https://libguides.lub.lu.se/c.php?g=676676&p=4820849"/>
     <author>
       <name>Brenton M. Wiernik</name>
       <email>zotero@wiernik.org</email>
+      <name>Michal Dobrovolný</name>
+      <email>michal.dobrovolny@uhk.cz</email>
     </author>
     <category citation-format="author-date"/>
     <category field="psychology"/>
