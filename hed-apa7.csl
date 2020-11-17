@@ -2,12 +2,15 @@
 <style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="never" page-range-format="expanded">
   <info>
     <title>Hradec Economic Days APA7</title>
-    <title-short>HED APA7/title-short>
+    <title-short>HED APA7</title-short>
+    <id>http://www.zotero.org/styles/hed-apa7</id>
     <link href="http://www.zotero.org/styles/apa" rel="template"/>
-    <link href="https://libguides.lub.lu.se/c.php?g=676676&p=4820849"/>
+    <link href="https://libguides.lub.lu.se/c.php?g=676676&amp;p=4820849" rel="documentation"/>
     <author>
       <name>Brenton M. Wiernik</name>
       <email>zotero@wiernik.org</email>
+    </author>
+    <author>
       <name>Michal Dobrovolný</name>
       <email>michal.dobrovolny@uhk.cz</email>
     </author>
