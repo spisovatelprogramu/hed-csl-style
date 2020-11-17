@@ -1307,7 +1307,10 @@
         </if>
       </choose>
       <choose>
-        <if variable="volume" match="any">
+        <if type="paper-conference">
+          <!-- empty for conference -->
+        </if>
+        <else-if variable="volume" match="any">
           <choose>
             <!-- Non-numeric volumes are already printed as part of the book title -->
             <if is-numeric="volume" match="none"/>
@@ -1318,7 +1321,7 @@
               </group>
             </else>
           </choose>
-        </if>
+        </else-if>
         <else>
           <group>
             <!-- Replace with label variable="number-of-volumes" if that becomes available -->
